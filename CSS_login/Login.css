@@ -1,0 +1,105 @@
+/*CSS DA ÁREA CENTRAL DA TELA DE LOGIN*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*Alteração de fonte do corpo da página*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*Centralização do conteúdo central geral da pagina (area de login e seus inputs)*/
+.divConjunto{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-items: center;
+
+}
+/*Posição do título do conteudo central + Imagem do Logo da Telecall*/
+.divTitulo{
+    position: relative;
+    text-align: center;
+    padding-bottom: 25px;
+}
+/*Shadow Box*/
+
+.divBox{
+    border: 1;
+    box-shadow: 10px 10px 10px rgb(155, 4, 4);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 12%;
+    border-style: none;
+}
+
+/*Posicionamento de todos os inputs da área de login feita de forma separada*/
+/*usuario*/
+.divUsuario{
+    position: relative;
+    text-align: center;
+}
+/*senha*/
+.divSenha{
+    position: relative;
+    text-align: center;
+}
+/*checkbox lembrar usuário*/
+.divCheckbox{
+    position: relative;
+    text-align: center;
+}
+/*botão entrar*/
+.divEntrar{
+    position: relative;
+    text-align: center;
+}
+/*link esqueci minha senha*/
+.divEsqueci_Senha{
+    position: relative;
+    text-align: center;
+}
+/*link cadastre-se*/
+.divCadastro{
+    position: relative;
+    text-align: center;
+}
+/*Imagem telecall*/
+#idImgTelecall{
+    margin-bottom: -10%;
+    padding-bottom: 25px;
+}
+/*titúlo e link do "esqueci a senha"*/
+#labelLembrarUsuario{
+    font-size: 15px;
+}
+/*Botão de Entrar da área de Login*/
+#idEntrar{
+    border-width: 1px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 4%;
+    margin-bottom: 2%;
+    padding: 7px;
+    width: 30%
+}
+/*Input de Senha*/
+#idSenha{
+    border-width: 1px;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+    padding: 8px;
+    margin-bottom: 4%;
+}
+/*Input de Usuário*/
+#idUsuario{
+    border-width: 1px;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+    padding: 8px;
+    margin-bottom: 4%;
+}
+/*Linha visual que divide os inputs da área com os links de esqueci minha senha e cadastre-se*/
+#idLinha{
+    opacity: 0.3;
+}
