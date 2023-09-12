@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 1;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    background-color: #7c0616;
+}
+.container{
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 0 15px;
+    background-color: #fff;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container header{
+    color: #b42936;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+.logotelecall img{
+    position: relative;
+    width: 250px;
+    left: 30%;
+}
+
+.container form{
+    position: relative;
+    min-height: 490px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+
+
+.container form .titulo{
+    display: flex;
+    margin-bottom: 6px;
+    margin-top: 2rem;
+    font-size: 20px;
+    font-weight: 600;
+    
+    color: #333;
+}
+
+.container form .inputs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.campo label{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+.campo input, select{
+    background-color: #e9e9e9;
+    width: 300px;
+    height: 50px;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+    outline: none;
+    color: black;
+    font-size:  1rem;
+    border: 1px solid #d3d3d3 ;
+    border-radius: 8px;
+}
+.campo input :focus,
+.campo select:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.campo select,
+.campo input[type="date"]{
+    color: #707070;
+}
+.campo input[type="date"]:valid{
+    color: #333;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.container form input[type="submit"]{
+    left: 5rem;
+    cursor: pointer;
+    width: 50%;
+    margin-top: 2.5rem;
+    height: 45px;
+    border: none;
+    border-radius: 32px;
+    background: #ab0505;
+    color: white;
+    font-size: 1.1rem;
+    transition: all .3s ease-in-out;
+}
+
+.linkLogin {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+form button:hover{
+    background-color: #910101;
+}
+
+@media (max-width: 750px) {
+    .container form{
+        overflow-y: scroll;
+    }
+    .container form::-webkit-scrollbar{
+       display: none;
+    }
+    form .inputs .campo{
+        width: calc(110% / 2 - 15px);
+    }
+}
+
+@media (max-width: 550px) {
+    form .inputs .campo{
+        width: 100%;
+    }
+}
+
+label.error{
+    font-weight: 500;
+    font-size: 14px;
+    display: block;
+    color: red;
+    margin-top: 1.4rem;
+    position: absolute;
+}
+input.error,select.error{
+    border-color: red;
+}
+/*const form = document.querySelector("#form");
+const nomeInput = document.querySelector("#nome");
+const cpfInput = document.querySelector("#CPF");
+const generoInput = document.querySelector("#genero");
+const datanascimentoInput = document.querySelector("#datanascimento");
+const nomematernoInput = document.querySelector("#nomematerno");
+const celularInput = document.querySelector("#celular");
+const telfixoInput = document.querySelector("#telfixo");
+const cepInput = document.querySelector("#cep");
+const ruaInput = document.querySelector("#rua");
+const numeroInput = document.querySelector("#numero");
+const bairroInput = document.querySelector("bairro");
+const cidadeInput = document.querySelector("cidade");
+const estadoInput = document.querySelector("estado");
+const loginInput = document.querySelector("#login");
+const senhaInput = document.querySelector("#senha");
+const confirmarsenhaInput = document.querySelector("#confirmarsenha");
+const messagetextarea = document.querySelector("#message");
