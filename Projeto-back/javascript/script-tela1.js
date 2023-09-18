@@ -32,28 +32,8 @@ $("#form").validate({
     },
     submitHandler: function (form)  {
 
-        var login = $("#login").val();
-        var senha = $("#senha").val();
+        form.submit();
 
-        var listaUser = JSON.parse(localStorage.getItem("listaUser"));
-
-        var usuarioValido = listaUser.find(function(usuario){
-            return usuario.loginCad === login && usuario.senhaCad === senha;
-        })
-        
-        if (usuarioValido){
-            //form.submit();
-            
-            window.location.href = "tela3.html";
-            
-        }
-        else {
-            $("#loginForm-error").html('<span class="error" style="display: flex; margin-top: 10px;margin-bottom: -20px;">*Usuário ou senha incorretos.</span>');
-
-        }
-            
-        
-        
     }
 });
 
