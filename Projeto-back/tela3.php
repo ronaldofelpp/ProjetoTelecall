@@ -16,7 +16,8 @@
 
   <nav class="navbar col-12 position-fixed navbar-expand-lg  navbar-custom" data-bs-theme="dark" style="z-index:999;">
     <div class="container-fluid col-11 m-auto">
-      <a class="navbar-brand" href="#"><img id="logotelecall" src="imagens/imagens-tela3/logo-telecall.png" style="margin-right: 1rem;" alt=""></a>
+      <a class="navbar-brand" href="#"><img id="logotelecall" src="imagens/imagens-tela3/logo-telecall.png"
+          style="margin-right: 1rem;" alt="logo-telecall"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -24,7 +25,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#" >Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#sobre-nos">Sobre nós</a>
@@ -61,7 +62,7 @@
         o usuário será redirecionado novamente para a página de login*/
         if (isset($_SESSION["CPF"])) {
           $nome = $_SESSION["nome"];
-          $sobrenome = $_SESSION["CPF"];
+          $cpf = $_SESSION["CPF"];
             
         }
 
@@ -70,14 +71,17 @@
         
       ?>
 
-        <button class="switch btn btn-outline-success" id="btnSwitch" style="width: 4%; border-radius: 50px; margin-right: 1rem; background-color: #0c4c7c;"><i class="fa-regular fa-moon" style="font-size: 15px;"></i></button>
-        
+        <button type="button" class="switch btn btn-outline-success" id="btnSwitch"
+          style="width: 4%; -webkit-border-radius: 50px;
+	      -moz-border-radius: 50px;-o-border-radius: 50px; -ms-border-radius: 50px; border-radius: 50px; margin-right: 1rem; background-color: #0c4c7c;"><i class="fa-regular fa-moon"
+            style="font-size: 15px;"></i></button>
+
         <?php 
             if (isset($_SESSION["CPF"])) {
               echo '<a href="dadoscadastrais.php"><i class="fa-regular fa-user fa-sm" style="margin-right: 5px;"></i>',$nome,'</a>';
               echo '<a href="encerrasessao.php" id=idencerra style="margin-left: 15px;">Sair</a>';
           } else {
-            echo '<i class="fa-regular fa-user fa-sm" style="margin-right: 5px;"></i>';
+            echo '<a href="tela2.html"><i class="fa-regular fa-user fa-sm" style="margin-right: 5px;"></i>Cadastre-se</a>';
           }
         ?>
       </div>
@@ -89,7 +93,7 @@
   <br>
 
   <!--IMAGEM EM CARROSSEL-->
-  <div id="carouselExampleControls" class="carousel slide carousel-fade col-11 m-auto" data-bs-ride="carousel" >
+  <div id="carouselExampleControls" class="carousel slide carousel-fade col-11 m-auto" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="imagens/imagens-tela3/PABX2.png" class="d-block w-100" alt="...">
@@ -116,8 +120,7 @@
   <div class="row row-cols-1 row-cols-md-2 g-4 col-9 m-auto">
 
     <div class="m-auto">
-      <img src="imagens/imagens-tela3/cpaas_1.png" alt="Celular Telecall"
-        style="width: 90%; margin-right: -2rem;">
+      <img src="imagens/imagens-tela3/cpaas_1.png" alt="Celular Telecall" style="width: 90%; margin-right: -2rem;">
     </div>
     <div class="cpaas col-6 m-auto">
       <h1 class="text-right">O que é CPaaS?</h1>
@@ -185,7 +188,7 @@
         <img src="imagens/imagens-tela3/sms-programavel2-1.png" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">SMS Programável</h5>
-          <p class="card-text">Programe suas notificações por SMS para serem enviados quando necessário.</p>
+          <p class="card-text">Programe suas notificações por SMS para serem enviados quando quiser.</p>
           <div class="text-center">
             <a href="SMSProg.html" class="btn btn-primary">Saiba mais</a>
           </div>
@@ -221,7 +224,8 @@
     <div class="icons">
       <i class="fa-solid fa-phone fa-6x text-center card-img-top" style="color:#0c4c7c"></i>
       <h3 class="text-center">Call Center</h1>
-        <p class="text-center" style="font-weight: 500;">Melhore taxas de abertura utilizando alertas SMS para confirmações.
+        <p class="text-center" style="font-weight: 500;">Melhore taxas de abertura utilizando alertas SMS para
+          confirmações.
 
           Economia de números com o uso de um único número máscara por todos os agentes.</p>
     </div>
@@ -267,7 +271,8 @@
   <hr>
   <div class="sobre col-8 m-auto">
     <h2 class="text-center" id="sobre-nos">Sobre nós</h2>
-    <p class="text-justify" style="font-weight: 500;">A Telecall é uma operadora de telecomunicações brasileira que oferece a seus clientes o mais
+    <p class="text-justify" style="font-weight: 500;">A Telecall é uma operadora de telecomunicações brasileira que
+      oferece a seus clientes o mais
       alto padrão de qualidade, velocidade e acessibilidade em soluções de comunicação. Serviços que incluem uma ampla
       gama de valores agregados, oferecendo aos clientes operações mais produtivas, inovadoras e eficazes. Com mais de
       20 anos de experiência na indústria global, a Telecall hoje é sinônimo de qualidade e eficiência.</p>

@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-.navbar-custom{
+
+.navbar-custom {
     background: linear-gradient(135deg, white 22%, #ab0505 21%, #910101 51%, #910101 100%);
 
 }
@@ -12,80 +13,95 @@
 i {
     font-size: 30px;
     color: white;
-    
+
 }
 
-form.d-flex button{
+form.d-flex button {
     width: 100%;
-    
+
 }
-.titleservice h1{
+
+.titleservice h1 {
     margin-top: 4rem;
     margin-bottom: 4rem;
 }
-.titleutility h1{
+
+.titleutility h1 {
     margin-top: 4rem;
     margin-bottom: 4rem;
 }
-.icons i{
+
+.icons i {
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
-.card i{
+
+.card i {
     color: black;
 }
-.card{
+
+.card {
     margin-bottom: 2rem;
 }
-.card, .card-img-top{
+
+.card,
+.card-img-top {
     border-radius: 20px;
 }
-.cpaas h1,h3{
+
+.cpaas h1,
+h3 {
     margin-bottom: 2rem;
 }
 
 
-.cpaas p{
+.cpaas p {
     font-weight: 600;
 }
 
 
-.why h1{
+.why h1 {
     margin-bottom: 2rem;
 }
-.why p{
+
+.why p {
     font-weight: 600;
 }
-.sobre h2{
+
+.sobre h2 {
     margin-bottom: 1.5rem;
 }
-.sobre p{
+
+.sobre p {
     font-weight: 600;
 }
 
-hr{
+hr {
     margin: auto;
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
     width: 80%;
-    
+
 }
+
 footer {
     color: grey;
     background-color: #212121;
     padding: 1rem;
     text-decoration: none;
 }
-footer a{
+
+footer a {
     text-decoration: none;
     margin-inline: 1px;
 
 }
-footer p{
+
+footer p {
     margin-top: 1.5rem;
 }
 
-.col button[type=button]{
+.col button[type=button] {
     left: 5rem;
     cursor: pointer;
     width: 50%;
@@ -98,23 +114,26 @@ footer p{
     font-size: 1.1rem;
     transition: all .3s ease-in-out;
 }
-.col button[type=button]:hover{
+
+.col button[type=button]:hover {
     background-color: #910101;
 }
 
 .carousel-item {
     transition: transform 1.6s ease-in-out;
-  }
-  
-  .carousel-fade .active.carousel-item-start,
-  .carousel-fade .active.carousel-item-end {
+}
+
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
     transition: opacity 0s 1.6s;
-  }
-.carousel-inner img{
+}
+
+.carousel-inner img {
     border-radius: 20px;
     margin-bottom: 1rem;
 
 }
+
 .btn {
     cursor: pointer;
     width: 60%;
@@ -127,12 +146,10 @@ footer p{
     transition: all .3s ease-in-out;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #910101;
 }
 
-#btnSwitch:hover{
+#btnSwitch:hover {
     background-color: #910101;
 }
-
-
