@@ -3,6 +3,11 @@
     que funcionam em diversas páginas diferentes*/
     session_start();
 
+    if(!isset($_SESSION['CPF'])) {
+        header('location: tela1.html');
+        exit();
+    }
+
     /*váriaveis criadas para armazenar informações para acessar
     e se conectar ao banco de dados*/
     $servername = "localhost";
@@ -28,7 +33,7 @@
 
     /*Variável com uma consulta SQL criada para verificar se o login e senha correspondem
     a um registro no banco de dados*/
-    $sql = "SELECT  NOME, CPF FROM teste_usuarios WHERE LOGIN = '$login' AND SENHA = '$senha'";
+    $sql = "SELECT  NOME, CPF, NOMEMAT FROM teste_usuarios WHERE LOGIN = '$login' AND SENHA = '$senha'";
     
     /*Executa a consulta SQL e armazena o resultado na variável $result*/
     $result = $conn->query($sql);
@@ -37,20 +42,17 @@
     $conn->close();
 
     
-    /*O IF verifica se a consulta retornou pelo emnos uma linha, se retornar
+    /*O IF verifica se a consulta retornou pelo menos uma linha, se retornar
     obviamente seu login foi bem-sucedido*/
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc(); //<- Obtém os dados do usuário da linha retornada pela consulta
         $_SESSION["CPF"] = $row["CPF"];
         $_SESSION["nome"] = $row["NOME"]; //<- Armazenam as informações da linha numa váriavel de sessão
+        $_SESSION["nomematerno"] = $row["NOMEMAT"];
         
-        header("location: tela3.php"); //<- Redireciona o usuário para outra página
+        header("location: autenticacao.php"); //<- Redireciona o usuário para a página de autenticação
     } else {
         echo "Login ou senha incorretos, falha na consulta ao banco.<a href='tela1.html'>Tentar novamente</a>";
     };
-
-
-
-
 
 ?>
